@@ -38,7 +38,7 @@
 -  Install npm 
     `$ sudo apt install npm`
 
--  Clone project  ( your project or use my project at https://github.com/nguyenthanhson162001/Deploy-Node-JS-and-Mysql-to-AWS-EC2-VPS-.git)
+-  Clone project 
 
     `$ sudo git clone  https://github.com/.........`
 
