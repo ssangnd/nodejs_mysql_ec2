@@ -73,3 +73,44 @@ mysql -u root -p
     ` sudo pm2 reload all `
 
 ---
+# htop
+# sudo su -
+# apt-get install nginx -y
+# which nginx
+# service nginx start
+
+# sudo apt update
+# sudo apt install nginx -y
+
+# curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
+
+curl -s https://deb.nodesource.com/setup_16.x | sudo bash -
+sudo apt install nodejs -y
+node -v
+sudo npm install pm2@latest -g
+mkdir apps
+ls
+cd apps
+cd simple_chat_app && cd client 
+npm install 
+pm2 start app.js --name chat_app
+pm2 logs 0
+npm i express
+sudo vim /etc/nginx/sites-available
+cmt root && index index.html
+cmt location
+
+server_name _;
+  location / {
+        proxy_pass http://localhost:5000; #whatever port your app runs on
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+sudo nginx -t
+sudo service nginx restart
+
+# https://github.com/ksekwamote/simple_chat_app/blob/master/server/app.js
